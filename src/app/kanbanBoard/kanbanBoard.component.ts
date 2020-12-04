@@ -9,6 +9,7 @@ export class KanbanBoard implements OnInit {
   tasks: Task[];
   stagesNames: string[];
   stagesTasks: any[]; //Only used for rendering purpose
+  taskInput;
 
   ngOnInit() {
     // Each task is uniquely identified by its name. 
@@ -35,6 +36,13 @@ export class KanbanBoard implements OnInit {
 
   generateTestId = (name) => {
     return name.split(' ').join('-');
+  }
+
+  createTask = (input) => {
+    console.log(`createTaskInput 00`);
+    console.log(input);
+    console.log(this.taskInput);
+    this.tasks.push({name: this.taskInput, stage: 0});
   }
 }
 
