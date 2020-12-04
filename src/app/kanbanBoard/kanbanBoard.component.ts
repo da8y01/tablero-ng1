@@ -38,11 +38,8 @@ export class KanbanBoard implements OnInit {
     return name.split(' ').join('-');
   }
 
-  createTask = (input) => {
-    console.log(`createTaskInput 00`);
-    console.log(input);
-    console.log(this.taskInput);
-    this.tasks.push({name: this.taskInput, stage: 0});
+  createTask = createTaskInput => {
+    console.log(createTaskInput);
   }
 }
 

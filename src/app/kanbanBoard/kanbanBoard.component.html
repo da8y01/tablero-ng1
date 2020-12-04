@@ -1,7 +1,7 @@
 <div class="mt-20 layout-column justify-content-center align-items-center">
     <section class="mt-50 layout-row align-items-center justify-content-center">
-      <input id="create-task-input" type="text" class="large" placeholder="New task name" data-test-id="create-task-input" [(ngModel)]="taskInput"/>
-      <button type="submit" class="ml-30" data-test-id="create-task-button" (click)="createTask('#create-task-input')">Create task</button>
+      <input id="create-task-input" type="text" class="large" placeholder="New task name" data-test-id="create-task-input" #createTaskInput />
+      <button type="submit" class="ml-30" data-test-id="create-task-button" (click)="createTask(createTaskInput.value)">Create task</button>
     </section>
 
     <div class="mt-50 layout-row">
